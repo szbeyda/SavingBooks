@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="BookList"
+        android:id="@+id/booklist"
+        android:icon="@drawable/booklisticon"/>
+    <item android:title="Add Book"
+        android:id="@+id/addbook"
+        android:icon="@drawable/bookaddicon"/>
+    <item android:title="User"
+        android:id="@+id/user"
+        android:icon="@drawable/personicon" />
+</menu>
