@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C3C1F"
+    android:background="#40532A"
     tools:context=".MainActivityLogin">
 
     <TextView
@@ -23,7 +23,6 @@
         android:layout_height="wrap_content"
         android:text="Hoşgeldiniz!"
         android:layout_centerHorizontal="true"
-
         android:textColor="@color/white"
         android:layout_marginLeft="140dp"
         android:layout_marginTop="575dp"
@@ -53,6 +52,8 @@
             android:inputType="textPassword"
             android:paddingLeft="20dp"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
+
             android:textSize="18sp"
             android:background="@drawable/edittextback"
             android:drawableLeft="@drawable/baseline_vpn_key_24"/>
@@ -69,6 +70,7 @@
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:background="@drawable/edittextback"
             android:drawableLeft="@drawable/baseline_person_24"/>
@@ -80,7 +82,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="75dp"
             android:layout_marginTop="275dp"
-            android:backgroundTint="#2C3C1F"
+            android:backgroundTint="#40532A"
             android:text="Log In"
             android:textAllCaps="false"
             android:textSize="16sp"/>
@@ -92,7 +94,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="75dp"
             android:layout_marginTop="325dp"
-            android:backgroundTint="#2C3C1F"
+            android:backgroundTint="#40532A"
             android:text="Sign Up"
             android:textAllCaps="false"
             android:textSize="16sp" />

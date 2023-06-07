@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2C3C1F"
+    android:background="#40532A"
     tools:context=".MainActivityLogin">
 
     <FrameLayout
@@ -40,6 +40,7 @@
             android:inputType="textPassword"
             android:paddingLeft="20dp"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <EditText
@@ -50,6 +51,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="80dp"
             android:background="@drawable/edittextback"
+            android:textColor="@color/white"
             android:drawableLeft="@drawable/baseline_person_24"
             android:ems="10"
             android:hint="First Name"
@@ -66,6 +68,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="140dp"
             android:background="@drawable/edittextback"
+            android:textColor="@color/white"
             android:drawableLeft="@drawable/baseline_person_24"
             android:ems="10"
             android:hint="Last Name"
@@ -88,6 +91,7 @@
             android:inputType="textPersonName"
             android:paddingLeft="20dp"
             android:textColorHint="@color/white"
+            android:textColor="@color/white"
             android:textSize="18sp" />
 
         <EditText
@@ -98,9 +102,10 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="330dp"
             android:background="@drawable/edittextback"
-            android:drawableLeft="@drawable/baseline_vpn_key_24"
+            android:drawableLeft="@drawable/baseline_email_24"
             android:ems="10"
             android:hint="Email"
+            android:textColor="@color/white"
             android:paddingLeft="20dp"
             android:textColorHint="@color/white"
             android:textSize="18sp" />
@@ -113,7 +118,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="75dp"
             android:layout_marginTop="400dp"
-            android:backgroundTint="#2C3C1F"
+            android:backgroundTint="#40532A"
             android:text="Sign Up"
             android:textAllCaps="false"
             android:textSize="16sp" />

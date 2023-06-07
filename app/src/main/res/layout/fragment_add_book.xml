@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6E754E"
+    android:background="#858F57"
     tools:context=".AddBookFragment">
 
     <ScrollView
@@ -21,22 +21,20 @@
                 android:id="@+id/bookImageView"
                 android:layout_width="240dp"
                 android:layout_height="250dp"
-                android:clickable="true"
                 android:layout_centerHorizontal="true"
-                android:src="@drawable/addbook_img"
-                android:onClick="onBookImageClicked"/>
+                android:clickable="true"
+                android:onClick="onBookImageClicked"
+                android:src="@drawable/addbook_img" />
 
             <Button
                 android:id="@+id/selectImageButton"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="25dp"
-                android:backgroundTint="#2C3C1F"
+                android:backgroundTint="#40532A"
                 android:text="Select Your Book Image"
                 android:textAllCaps="false"
                 android:textSize="17sp" />
-
-
 
 
             <EditText
@@ -45,8 +43,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
                 android:hint="Book Name"
-                android:textColorHint="@color/white"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/white" />
 
             <EditText
                 android:id="@+id/bookWriter"
@@ -54,8 +52,8 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="50dp"
                 android:hint="Book Writer"
-                android:textColorHint="@color/white"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/white" />
 
             <EditText
                 android:id="@+id/bookSummary"
@@ -63,15 +61,15 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:hint="Book Summary"
-                android:textColorHint="@color/white"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textColorHint="@color/white" />
 
             <Button
                 android:id="@+id/saveButton"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="25dp"
-                android:backgroundTint="#2C3C1F"
+                android:backgroundTint="#40532A"
                 android:text="Save"
                 android:textAllCaps="false"
                 android:textSize="20sp" />
