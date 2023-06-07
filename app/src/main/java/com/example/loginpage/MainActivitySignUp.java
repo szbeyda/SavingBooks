@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import com.example.loginpage.database.ApplicationDatabase;
 import com.example.loginpage.database.user.User;
 
-public class MainActivity3 extends AppCompatActivity {
+public class MainActivitySignUp extends AppCompatActivity {
     RelativeLayout login_panel;
     Button btnsignup;
     EditText editpsw, editfirstname, editlastname, edituser, editemail;
@@ -39,7 +39,7 @@ public class MainActivity3 extends AppCompatActivity {
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ApplicationDatabase db = ApplicationDatabase.getDbInstance(MainActivity3.this);
+                ApplicationDatabase db = ApplicationDatabase.getDbInstance(MainActivitySignUp.this);
                 User user = new User();
                 user.setEmail(editemail.getText().toString());
                 user.setFirstName(editfirstname.getText().toString());

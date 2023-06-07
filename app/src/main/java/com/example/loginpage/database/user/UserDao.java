@@ -16,7 +16,11 @@ public interface UserDao {
     @Query("SELECT * FROM USER WHERE username LIKE :userName AND password LIKE :password")
     LiveData<User> readAllData(String userName, String password);
 
+    @Query("SELECT * FROM USER WHERE fie_id=:userId")
+    LiveData<User> getUser(int userId);
+
     @Insert
     void insert(User user);
+
 
 }

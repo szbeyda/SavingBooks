@@ -53,7 +53,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
     public void onBackPressed() { //geriye- 1.intent sıfırla
-        Intent backIntent = new Intent(MainActivity2.this, MainActivity.class);
+        Intent backIntent = new Intent(MainActivity2.this, MainActivityLogin.class);
         finish();
         startActivity(backIntent);
 

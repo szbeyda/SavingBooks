@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.example.loginpage.database.ApplicationDatabase;
 import com.example.loginpage.database.user.User;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivityLogin extends AppCompatActivity {
     RelativeLayout login_panel;
     Button btn, btnsignup;
     EditText textUser, textPsw;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         btnsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                Intent intent = new Intent(MainActivityLogin.this, MainActivitySignUp.class);
                 startActivity(intent);
             }
         });
@@ -51,23 +51,23 @@ public class MainActivity extends AppCompatActivity {
                 userId = textUser.getText().toString();
                 userPsw = textPsw.getText().toString();
                 if (!TextUtils.isEmpty(userId) && !TextUtils.isEmpty(userPsw)) {
-                    ApplicationDatabase db = ApplicationDatabase.getDbInstance(MainActivity.this);
+                    ApplicationDatabase db = ApplicationDatabase.getDbInstance(MainActivityLogin.this);
                     LiveData<User> userLiveData= db.userDao().readAllData(userId, userPsw);
 
-                    userLiveData.observe(MainActivity.this, user-> {
+                    userLiveData.observe(MainActivityLogin.this, user-> {
                         if (user != null) {
-                            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                            Intent intent = new Intent(MainActivityLogin.this, MainActivity2.class);
                             intent.putExtra("intentUId", user.getFie_id());
                             finish();
                             startActivity(intent);
                         } else {
-                            Toast.makeText(MainActivity.this, "You entered the wrong username or password", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivityLogin.this, "You entered the wrong username or password", Toast.LENGTH_SHORT).show();
                         }
                     });
 
 
                 } else
-                    Toast.makeText(MainActivity.this, "username or password cannot be empty", Toast.LENGTH_SHORT).
+                    Toast.makeText(MainActivityLogin.this, "username or password cannot be empty", Toast.LENGTH_SHORT).
 
                             show();
 
