@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.example.loginpage.database.ApplicationDatabase;
 import com.example.loginpage.database.user.User;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
@@ -27,8 +29,11 @@ public class PersonFragment extends Fragment {
     private TextView usernameTextView;
     private TextView emailTextView;
     private TextView passwordTextView;
+    private TextView bookCountTextView;
+
 
     private ApplicationDatabase appDatabase;
+    private BookListAdapter adapter;
 
 
     @Override
@@ -44,7 +49,15 @@ public class PersonFragment extends Fragment {
         emailTextView = view.findViewById(R.id.emailTextView);
         passwordTextView = view.findViewById(R.id.passwordTextView);
 
+        bookCountTextView = view.findViewById(R.id.bookCountTextView);
+        adapter = new BookListAdapter(new ArrayList<>());
         ApplicationDatabase db = ApplicationDatabase.getDbInstance(getContext());
+
+        int bookCount = db.bookDao().getUserBooks(((MainActivity2) getActivity()).incUId).size();
+
+        bookCountTextView.setText("Book Count: " + bookCount);
+
+
 
         db.userDao().getUser(((MainActivity2) getActivity()).incUId).observe(getViewLifecycleOwner(), user -> {
             if (user != null) {

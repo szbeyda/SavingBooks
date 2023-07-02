@@ -55,10 +55,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
     public void setBooks(List<Book> books) {
 
         this.books = books;
-    }
-
-    public List<Book> getBooks() {
-        return books;
+        notifyDataSetChanged();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

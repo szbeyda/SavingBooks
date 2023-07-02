@@ -7,57 +7,84 @@
     tools:context=".PersonFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/bookCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="40dp"
+        android:text="Number Of Registered Books:"
+        android:textColor="#2C3C1F"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
     <LinearLayout
-        android:layout_width="355dp"
-        android:layout_height="383dp"
+        android:layout_width="365dp"
+        android:layout_height="320dp"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:paddingTop="55dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/personback">
+
 
         <TextView
             android:id="@+id/firstNameTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
+            android:paddingBottom="23dp"
             android:text="First Name: "
-            android:textSize="22sp"
+            android:textColor="#AAB670"
+            android:textSize="19sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/lastNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
+            android:paddingBottom="23dp"
             android:text="Last Name: "
-            android:textSize="22sp"
+            android:textColor="#AAB670"
+            android:textSize="19sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/usernameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
+            android:paddingBottom="23dp"
             android:text="Username: "
-            android:textSize="22sp"
+            android:textColor="#AAB670"
+            android:textSize="19sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/emailTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
+            android:paddingBottom="23dp"
             android:text="Email: "
-            android:textSize="22sp"
+            android:textSize="19sp"
+            android:textColor="#AAB670"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/passwordTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="20dp"
+            android:paddingBottom="23dp"
             android:text="Password: "
-            android:textSize="22sp"
+            android:textSize="19sp"
+            android:textColor="#AAB670"
             android:textStyle="bold" />
+        <ImageView
+            android:layout_width="265dp"
+            android:layout_height="350dp"
+            android:layout_gravity="right"
+            android:rotationX="-4"
+            android:src="@drawable/person" />
 
 
     </LinearLayout>
@@ -66,12 +93,21 @@
         android:id="@+id/btnexit"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal|bottom"
         android:layout_marginTop="200dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#2C3C1F"
         android:text="Exit"
+        android:textColor="#AAB670"
         android:textAllCaps="false"
         android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="265dp"
+        android:layout_height="350dp"
+        android:layout_gravity="right"
+        android:rotationX="-4"
+        android:src="@drawable/person" />
 
 
 </FrameLayout>

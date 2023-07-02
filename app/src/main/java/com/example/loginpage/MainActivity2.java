@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
+import com.example.loginpage.database.ApplicationDatabase;
+import com.example.loginpage.database.book.BookDao;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -17,6 +20,9 @@ public class MainActivity2 extends AppCompatActivity {
 
     AddBookFragment addBookFragment;
     BookListFragment bookListFragment;
+
+    // BookDao sınıfından bir referans oluşturun
+    private BookDao bookDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,17 +54,28 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
+        // BookDao sınıfının örneğini alın
+        bookDao = ApplicationDatabase.getDbInstance(this).bookDao();
+
+       /* // Kitap sayacını güncelleyin ve görüntüleyin
+        updateBookCount();*/
+
+    }
+    // Kitap sayacını güncellemek için bir metod oluşturun
+   /* private void updateBookCount() {
+        int bookCount = bookDao.getBookCount(); // Kitap sayısını alın
+        // Kitap sayacını güncelleyin (XML dosyasında yer alan TextView'in id'sini kullanarak)
+        TextView bookCountTextView = findViewById(R.id.bookCountTextView);
+        bookCountTextView.setText("Number Of Registered Books: " + bookCount);}*/
+
+
+        public void onBackPressed () { //geriye- 1.intent sıfırla
+            Intent backIntent = new Intent(MainActivity2.this, MainActivityLogin.class);
+            finish();
+            startActivity(backIntent);
+
+
+        }
 
     }
 
-
-    public void onBackPressed() { //geriye- 1.intent sıfırla
-        Intent backIntent = new Intent(MainActivity2.this, MainActivityLogin.class);
-        finish();
-        startActivity(backIntent);
-
-
-    }
-
-
-}

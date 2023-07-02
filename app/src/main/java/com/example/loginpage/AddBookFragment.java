@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.provider.MediaStore;
 import android.view.LayoutInflater;
@@ -93,8 +94,6 @@ public class AddBookFragment extends Fragment {
                 bookSummaryEditText.setText("");
                 bookImageView.setImageURI(null);
 
-                //bookImageView.setImageDrawable(getResources().getDrawable(R.drawable.gzp));
-                //edtImageUrl.setText("");
                 // Seçilen resmi göster
                 if (selectedImageUri != null) {
                     bookImageView.setImageURI(selectedImageUri);
