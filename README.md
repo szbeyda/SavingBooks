@@ -1,12 +1,14 @@
 
 ### Save Your Books 
  Uygulama kullanıcının Kayıt olarak okuduğu kitapları eklemesi ve bunları liste haline getirebilmesini baz alır.
- Öncelikle kullanıcı Sign Up üzerinde üye kaydı yaptıktan sonra Log In Üzerinden üye girişi yapabilir. Kullanıcı Kullanıcı adı ve şifreyi yanlış girme durumuzda "You entered the wrong username or password" uyarı mesajı verilir. Doğru Girişten sonra kullanıcı uygulamaya yönlendirilir. Kullanıcı giriş bilgileri User sayfasında yer almaktadır. Başlıngaçta Kitap kaydı bulunmayanın kullanıcının User sayfasındaki Book Count sayacı 0 olarak gösterilir. Add Book Sayfasından kullanıcı Kitap Fotoğrafı, Kitap Adı, Yazar Adı ve Özet bilgilerini girer ve kitabı kaydeder. Güncel kitap listesi Book List sayfasında Liste olarak verilir. Kullanıcı kitap eklemesi yaptıkça Book Counter Güncellenir. Kullanıcı Book List sayfasında eklediği kitap üzerinde arama yapabilir.
+ Öncelikle kullanıcı Sign Up üzerinde üye kaydı yaptıktan sonra Log In Üzerinden üye girişi yapabilir. Kullanıcı, Kullanıcı adı ve şifreyi yanlış girme durumuzda "You entered the wrong username or password" uyarı mesajı verilir. Doğru girişten sonra kullanıcı uygulamaya yönlendirilir. Kullanıcı giriş bilgileri User sayfasında yer almaktadır. Başlıngaçta Kitap kaydı bulunmayan kullanıcının User sayfasındaki Book Count sayacı 0 olarak gösterilir. Add Book Sayfasından kullanıcı Kitap Fotoğrafı, Kitap Adı, Yazar Adı ve Özet bilgilerini girer ve kitabı kaydeder. Güncel kitap listesi Book List sayfasında Liste olarak verilir. Kullanıcı kitap ekledikçe Book Counter Güncellenir. Kullanıcı Book List sayfasında kitap filtreleme yapabilir. Kullanıcı User sayfasında Exit butonu ile hesabından çıkış yapar ve tekrar kullanıcı adı ve parolası ile hesabına giriş yapar.
+ 
  LogIn, SıgnUp ve 3 ayrı Fragmente bağlı (BookList-AddBook-User) 3 MainActivity sayfası kullanılmıştır.
  Kullanıcı giriş bilgileri ve Kullanıcnın girdiği kitap bilgileri, veritabanı için Data Acces Object(DAO) kullanılmıştır. (UserDao-BookDao) 
  
  Add Book Sayfası : 
- - Kitap fotoğrafı için :bookImageView üzerinde bir OnClickListener atanır. Bu resme tıklandığında, galeriye erişmek için openGallery yöntemi çağrılır. openGallery metodu, galeriye erişim sağlamak için bir intent oluşturur ve startActivityForResult ile başlatır.
+ - Kitap fotoğrafı için :bookImageView üzerinde bir OnClickListener atanır. Bu resme tıklandığında, galeriye erişmek için openGallery yöntemi çağrılır.
+   - openGallery metodu, galeriye erişim sağlamak için bir intent oluşturur ve startActivityForResult ile başlatır.
  - Kitao bilgileri kaydı için : saveButton üzerinde bir OnClickListener atanır. Bu düğme tıklandığında, EditText alanlarındaki metinleri alır, seçilen resim URI'sini alır, yeni bir Book nesnesi oluşturur ve veritabanına ekler. Ardından EditText alanları temizlenir ve seçilen resim gösterilir.
    
 Book List Sayfası :
@@ -23,17 +25,29 @@ User Sayfası :
 - Kişisel bilgilerin görüntülenmesi: ApplicationDatabase sınıfını kullanarak veritabanına erişir ve kullanıcının kişisel bilgilerini alır. Alınan bilgileri TextView öğelerine yerleştirir.
 - Kitap sayısının görüntülenmesi: BookListAdapter sınıfını kullanarak kitap sayısını alır ve bookCountTextView'de görüntüler.
 - Çıkış yapma işlemi: btnexit butonuna bir tıklama olayı dinleyicisi ekler. Tıklandığında MainActivityLogin sınıfına yönlendirme yapar ve çıkış yapma işlemini gerçekleştirir.
+
+  **BÜTÜNLEME için FİNAL PROJESİ üzerinde
+  - User Sayfası Tasarımı geliştirildi
+  - Kitap sayısını güncelleyeren sayan Kitap Sayacı User Sayfasına eklendi
+  - Book List sayfasında Kitaplar arası Filtreleme eklendi
  
  Uygulama Video Linki:
+ (Video Android Studio Emülatör üzerinde alınmıştır)
 
 https://youtu.be/fTzedNRhaOw
 
 Uygulama Ekran Görüntüleri:
+(Ekran Görüntüleri Telefon üzerinden alınmıştır)
+
 <div align="center">
-  <img src="https://www.linkpicture.com/q/Login_1.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/Signup.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/Book-List.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/Add-Book.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/User.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/login.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/signup.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/uyarı-mesajı.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/book-list.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/user_5.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/add-book.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/Book-List1.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/kitap-filtreleme_1.jpeg" width=250>
+ <img src="https://www.linkpicture.com/q/user2.jpeg" width=250>
 <div/>
  
