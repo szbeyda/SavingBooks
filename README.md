@@ -36,18 +36,6 @@ User Sayfası :
 
 https://youtu.be/fTzedNRhaOw
 
-Uygulama Ekran Görüntüleri:
-(Ekran Görüntüleri Telefon üzerinden alınmıştır)
+Uygulama UI Tasarımları :https://www.figma.com/file/liYWusgZ6d01OZmkmpV6UO/Untitled?type=design&node-id=0-1&mode=design&t=fWdgyplDZHOWGF39-0
 
-<div align="center">
- <img src="https://www.linkpicture.com/q/login.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/signup.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/uyarı-mesajı.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/book-list.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/user_5.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/add-book.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/Book-List1.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/kitap-filtreleme_1.jpeg" width=250>
- <img src="https://www.linkpicture.com/q/user2.jpeg" width=250>
-<div/>
- 
+
